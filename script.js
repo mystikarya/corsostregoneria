@@ -53,12 +53,14 @@ function startScreen() {
     app.innerHTML = `
         <div class="start-screen">
 
-            <h1>Corso di Stregoneria</h1>
+            <h1 class="corso" style="line-height:0.9!important;">Corso di
+            <br>STREGONERIA</h1>
 
-            <p>
-                Benvenuta/o! Oggi inizia il tuo percorso magico.
-                <br>Segui le lezioni e affronta il test finale per ottenere
-                <br>il Certificato di Stregoneria!
+            <br><p>
+                Benvenuta/o!
+                <br>Oggi inizia il tuo percorso magico.
+                <br>Segui le lezioni e affronta il test finale
+                <br>per ottenere il Certificato di Stregoneria!
             </p>
 
             <button id="lessonsButton">
@@ -95,24 +97,50 @@ function showLessons() {
 
             <h1>Lezioni</h1>
 
-     <button class="lesson-button" onclick="location.href='lezione1.html'">1. Introduzione alla Ritualistica</button>
+<button class="lesson-button"
+        onclick="window.open('https://youtu.be/KF_WKo94QVY', '_blank')">
+    1. Introduzione alla Ritualistica
+</button>
 
-<button class="lesson-button" onclick="location.href='lezione2.html'">2. Le principali tradizioni</button>
+<button class="lesson-button"
+        onclick="window.open('https://youtu.be/ghTIrXwCwwg', '_blank')">
+    2. Le principali tradizioni
+</button>
 
-<button class="lesson-button" onclick="location.href='lezione3.html'">3. Stregoneria evocativa e non evocativa</button>
+<button class="lesson-button"
+        onclick="window.open('https://youtu.be/-rYgPhRFruI', '_blank')">
+    3. Stregoneria evocativa e non evocativa
+</button>
 
-<button class="lesson-button" onclick="location.href='lezione4.html'">4. I falsi miti sulla Stregoneria</button>
+<button class="lesson-button"
+        onclick="window.open('https://youtu.be/qSgCu4ton_I', '_blank')">
+    4. I falsi miti sulla Stregoneria
+</button>
 
-<button class="lesson-button" onclick="location.href='lezione5.html'">5. Il libero arbitrio</button>
+<button class="lesson-button"
+        onclick="window.open('https://youtu.be/eFCt_T1A4E4', '_blank')">
+    5. Il libero arbitrio
+</button>
 
-<button class="lesson-button" onclick="location.href='lezione6.html'">6. Le fasi di un rituale</button>
+<button class="lesson-button"
+        onclick="window.open('https://youtu.be/VYrjQKvYm-g', '_blank')">
+    6. Le fasi di un rituale
+</button>
 
-<button class="lesson-button" onclick="location.href='lezione7.html'">7. Quando praticare</button>
+<button class="lesson-button"
+        onclick="window.open('https://youtu.be/Im0ipO4QCow', '_blank')">
+    7. Quando praticare
+</button>
 
-<button class="lesson-button" onclick="location.href='lezione8.html'">8. Introduzione alla Divinazione</button>
+<button class="lesson-button"
+        onclick="window.open('https://youtu.be/Z_QFPJAMSug', '_blank')">
+    8. Introduzione alla Divinazione
+</button>
 
-<button class="lesson-button" onclick="location.href='lezione9.html'">9. Laboratorio pratico: il tuo Rituale</button>
-
+<button class="lesson-button"
+        onclick="window.open('LINK', '_blank')">
+    9. Laboratorio pratico: il tuo Rituale
+</button>
             <button onclick="startScreen()">
                 ❮ Torna al menu
             </button>

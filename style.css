@@ -378,7 +378,8 @@ h1 {
     animation: fadeUp 1.2s ease
 }
 
-#startButton {
+
+#startButton,#testButton, #lessonsButton {
 
     min-width: 280px;
     width: 280px;
