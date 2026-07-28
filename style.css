@@ -735,6 +735,10 @@ a button {
 
     }
 
+    .corso-screen {
+    padding-top: 140px!important;
+    }
+
     .result {
         margin-top:60px;
         padding: 10px;

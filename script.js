@@ -51,7 +51,7 @@ function startScreen() {
     changeBackground("home");
 
     app.innerHTML = `
-        <div class="start-screen">
+        <div class="start-screen corso-screen">
 
             <h1 class="corso" style="line-height:0.9!important;">Corso di
             <br>STREGONERIA</h1>
