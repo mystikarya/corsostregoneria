@@ -62,10 +62,14 @@ function startScreen() {
                 <br>Segui le lezioni e affronta il test finale
                 <br>per ottenere il Certificato di Stregoneria!
             </p>
-
             <button id="lessonsButton">
                 LEZIONI
             </button>
+
+<button id="grimorioButton"
+onclick="window.open('assets/grimorio.pdf','_blank')">
+GRIMORIO
+</button>
 
             <button id="testButton">
                 TEST

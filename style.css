@@ -379,7 +379,7 @@ h1 {
 }
 
 
-#startButton,#testButton, #lessonsButton {
+#startButton,#testButton, #lessonsButton, #grimorioButton {
 
     min-width: 280px;
     width: 280px;
@@ -774,7 +774,7 @@ a button {
         font-size: 19px
     }
 
-   #testButton, #lessonsButton{
+   #testButton, #lessonsButton, #grimorioButton {
     min-width: 200px;
     width: 200px;
     height: 64px;
