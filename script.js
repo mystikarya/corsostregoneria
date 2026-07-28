@@ -66,10 +66,8 @@ function startScreen() {
                 LEZIONI
             </button>
 
-<button id="grimorioButton"
-onclick="window.open('assets/grimorio.pdf','_blank')">
-GRIMORIO
-</button>
+            <button id="grimorioButton" onclick="location.href='grimorio.html'">
+            GRIMORIO</button>
 
             <button id="testButton">
                 TEST

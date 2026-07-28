@@ -16,6 +16,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 Lezioni
             </a>
 
+            <a href="grimorio.html">Grimorio</a>
+
+
             <a href="testfinale.html">
                 Test Finale
             </a>

@@ -1,0 +1,289 @@
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    width:100vw;
+    height:100vh;
+    overflow:hidden;
+    color:#fff;
+    background:
+        radial-gradient(circle at top,
+        #3b3326,
+        #1b1815 45%,
+        #090909);
+    font-family: Arial, sans-serif;
+    position: relative;
+}
+
+
+/* ===========================
+   LIBRO
+=========================== */
+
+#bookContainer{
+
+    position:relative;
+
+    width:100vw;
+    height:calc(100vh - 80px);
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    overflow:hidden;
+
+}
+
+
+/* ===========================
+   PAGINA
+=========================== */
+
+#currentPage{
+
+    display:block;
+
+    width:auto;
+
+    max-width:90vw;
+
+    max-height:92vh;
+
+    object-fit:contain;
+
+    border-radius:8px;
+
+    opacity:0;
+
+    transition:opacity .35s ease;
+
+    user-select:none;
+    -webkit-user-drag:none;
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.65),
+        0 0 20px rgba(255,255,255,.08);
+
+}
+
+#currentPage.active{
+
+    opacity:1;
+
+}
+
+
+/* ===========================
+   PULSANTI LATERALI
+=========================== */
+
+.sideButton{
+
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:64px;
+    height:64px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:rgba(25,25,25,.75);
+
+    backdrop-filter:blur(10px);
+
+    color:#fff;
+
+    font-size:30px;
+
+    cursor:pointer;
+
+    transition:
+        background .25s,
+        transform .25s;
+
+    z-index:20;
+
+}
+
+.sideButton:hover{
+
+    background:rgba(60,60,60,.9);
+
+    transform:
+        translateY(-50%)
+        scale(1.08);
+
+}
+
+#prevButton{
+
+    left:25px;
+
+}
+
+#nextButton{
+
+    right:25px;
+
+}
+
+
+/* ===========================
+   BARRA INFERIORE
+=========================== */
+
+#bottomBar{
+
+    position:fixed;
+
+    left:0;
+    bottom:0;
+
+    width:100%;
+    height:80px;
+
+    background:rgba(0,0,0,.55);
+
+    backdrop-filter:blur(12px);
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:0 20px;
+
+}
+
+#counter{
+
+    font-size:18px;
+
+    letter-spacing:1px;
+
+    color:#f5f5f5;
+
+}
+
+
+/* pulsanti mobile */
+
+#prevMobile,
+#nextMobile{
+
+    display:none;
+
+    width:56px;
+    height:56px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#282828;
+
+    color:#fff;
+
+    font-size:26px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+#prevMobile:hover,
+#nextMobile:hover{
+
+    background:#444;
+
+    transform:scale(1.08);
+
+}
+
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width:768px){
+
+    #bookContainer{
+
+        height:calc(100vh - 70px);
+
+    }
+
+    #currentPage{
+
+        width:100vw;
+
+        height:100%;
+
+        max-width:none;
+
+        max-height:none;
+
+        object-fit:contain;
+
+        border-radius:0;
+
+        box-shadow:none;
+
+    }
+
+    /* nasconde le frecce laterali */
+
+    .sideButton{
+
+        display:none;
+
+    }
+
+    /* mostra quelle sotto */
+
+    #prevMobile,
+    #nextMobile{
+
+        display:flex;
+
+        justify-content:center;
+        align-items:center;
+
+    }
+
+    #bottomBar{
+
+        height:70px;
+
+        padding:0 12px;
+
+        justify-content:space-between;
+
+    }
+
+    #counter{
+
+        font-size:15px;
+
+    }
+
+}

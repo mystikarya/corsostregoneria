@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Grimorio</title>
+
+    <link rel="stylesheet" href="grimorio.css">
+
+</head>
+
+<body>
+
+    <div id="bookContainer">
+
+        <!-- Freccia sinistra (Desktop) -->
+        <button id="prevButton" class="sideButton" aria-label="Pagina precedente">
+            ❮
+        </button>
+
+        <!-- Pagina -->
+        <img id="currentPage"
+             src="assets/grimorio/001.jpg"
+             alt="Pagina del Grimorio">
+
+        <!-- Freccia destra (Desktop) -->
+        <button id="nextButton" class="sideButton" aria-label="Pagina successiva">
+            ❯
+        </button>
+
+    </div>
+
+    <!-- Barra inferiore (Mobile) -->
+    <div id="bottomBar">
+
+        <button id="prevMobile" aria-label="Pagina precedente">
+            ❮
+        </button>
+
+        <div id="counter">
+            Pagina 1 / 80
+        </div>
+
+        <button id="nextMobile" aria-label="Pagina successiva">
+            ❯
+        </button>
+
+    </div>
+
+    <link rel="stylesheet" href="menu.css">
+    <script src="menu.js"></script>
+    <script src="grimorio.js"></script>
+
+</body>
+<footer class="site-footer">
+    © MystikArya
+</footer>
+
+</html>
