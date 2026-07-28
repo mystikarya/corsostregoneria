@@ -328,7 +328,7 @@ async function generateCertificate() {
 
         ctx.drawImage(image, 0, 0);
 
-        let size = 460;
+        let size = 500;
         ctx.font = `${size}px Elven`;
 
         while (
