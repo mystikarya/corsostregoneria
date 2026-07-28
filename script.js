@@ -7,6 +7,7 @@ const app = document.getElementById("app");
 const backgrounds = {
     home: "assets/bg1.png",
     quiz: "assets/bg2.png",
+    lessons: "assets/bg4.png",
     result: "assets/bg3.png"
 };
 
@@ -51,328 +52,73 @@ function startScreen() {
 
     app.innerHTML = `
         <div class="start-screen">
-            <h1>TEST FINALE</h1>
-            <p>
-                Rispondi correttamente per otterrenere il<br>
-                Certificato di Stregoneria!
-            </p>
-            <button id="startButton">INIZIA</button>
-        </div>`;
 
-    document.getElementById("startButton").onclick = () => {
-
-        document.body.className = "quiz";
-        changeBackground("quiz");
-
-        i = 0;
-        draw();
-
-    };
-}
-
-
-function draw() {
-
-    if (i >= questions.length) {
-        showLoading();
-        return;
-    }
-
-    const q = questions[i];
-
-    app.innerHTML = `
-        <div class="progress-text">Domanda ${i + 1} di ${questions.length}</div>
-        <h2>${q.question}</h2>
-    `;
-
-    q.answers.forEach((text, index) => {
-
-        const b = document.createElement("button");
-        b.className = "answer";
-        b.textContent = text;
-
-        if (ans[i] === index) {
-            b.classList.add("selected");
-        }
-
-        b.onclick = () => {
-
-            ans[i] = index;
-
-            document
-                .querySelectorAll(".answer")
-                .forEach(x => x.classList.remove("selected"));
-
-            b.classList.add("selected");
-
-        };
-
-        app.appendChild(b);
-
-    });
-
-    const nav = document.createElement("div");
-    nav.className = "nav-buttons";
-
-    const next = document.createElement("button");
-    next.textContent = i === questions.length - 1 ? "CONCLUDI" : "AVANTI ❯";
-
-    next.onclick = () => {
-
-        if (ans[i] === null) {
-            alert("Seleziona una risposta.");
-            return;
-        }
-
-        i++;
-        draw();
-
-    };
-
-    const prev = document.createElement("button");
-    prev.textContent = "❮ INDIETRO";
-
-    if (i === 0) {
-        prev.style.visibility = "hidden";
-    }
-
-    prev.onclick = () => {
-
-        if (i > 0) {
-            i--;
-            draw();
-        }
-
-    };
-
-    nav.appendChild(next);
-    nav.appendChild(prev);
-
-    app.appendChild(nav);
-
-}
-
-function showLoading() {
-
-    document.body.className = "result";
-    changeBackground("result");
-
-    app.innerHTML = `
-        <div class="loading-screen">
-            <div class="magic-loader">
-                <div class="ring"></div>
-                <div class="orb"></div>
-            </div>
-        </div>
-    `;
-
-    app.style.opacity = "0";
-
-    requestAnimationFrame(() => {
-        app.style.opacity = "1";
-    });
-
-    setTimeout(() => {
-        end();
-    }, 2500);
-
-}
-
-function end() {
-    document.body.className = "result";
-    changeBackground("result");
-
-    let score = 0;
-
-    ans.forEach((a, n) => {
-        if (a === questions[n].correct) score++;
-    });
-
-    if (score >= 6) {
-
-        app.innerHTML = `
-        <div class="result">
-
-            <h1>COMPLIMENTI</h1>
+            <h1>Corso di Stregoneria</h1>
 
             <p>
-                Hai risposto correttamente a
-                <b>${score}</b> domande su
-                <b>${questions.length}</b>.
+                Benvenuta/o! Oggi inizia il tuo percorso magico.
+                <br>Segui le lezioni e affronta il test finale per ottenere
+                <br>il Certificato di Stregoneria!
             </p>
 
-            <br>
-
-            <p>Inserisci il nome che desideri sul certificato</p>
-
-            <input
-                id="certificateName"
-                type="text"
-                maxlength="40"
-                placeholder="Nome e Cognome"
-            >
-
-            <br><br>
-
-            <button id="generateCertificate">
-                📜 Genera Certificato
+            <button id="lessonsButton">
+                LEZIONI
             </button>
-            <p class="aspetta" id="downloadMessage">
-    <small>(aspetta qualche secondo l'inizio del download)</small>
-</p>
-            <canvas
-                id="certificateCanvas"
-                style="display:none"
-            ></canvas>
+
+            <button id="testButton">
+                TEST
+            </button>
+
+        </div>`;
+
+    document.getElementById("lessonsButton").onclick = () => {
+
+        showLessons();
+
+    };
+
+    document.getElementById("testButton").onclick = () => {
+
+        location.href = "testfinale.html";
+
+    };
+
+}
+
+function showLessons() {
+
+    document.body.className = "home";
+    changeBackground("lessons");
+
+    app.innerHTML = `
+        <div class="page-container">
+
+            <h1>Lezioni</h1>
+
+     <button class="lesson-button" onclick="location.href='lezione1.html'">1. Introduzione alla Ritualistica</button>
+
+<button class="lesson-button" onclick="location.href='lezione2.html'">2. Le principali tradizioni</button>
+
+<button class="lesson-button" onclick="location.href='lezione3.html'">3. Stregoneria evocativa e non evocativa</button>
+
+<button class="lesson-button" onclick="location.href='lezione4.html'">4. I falsi miti sulla Stregoneria</button>
+
+<button class="lesson-button" onclick="location.href='lezione5.html'">5. Il libero arbitrio</button>
+
+<button class="lesson-button" onclick="location.href='lezione6.html'">6. Le fasi di un rituale</button>
+
+<button class="lesson-button" onclick="location.href='lezione7.html'">7. Quando praticare</button>
+
+<button class="lesson-button" onclick="location.href='lezione8.html'">8. Introduzione alla Divinazione</button>
+
+<button class="lesson-button" onclick="location.href='lezione9.html'">9. Laboratorio pratico: il tuo Rituale</button>
+
+            <button onclick="startScreen()">
+                ❮ Torna al menu
+            </button>
 
         </div>
     `;
-
-        document
-            .getElementById("generateCertificate")
-            .onclick = generateCertificate;
-
-    } else {
-        app.innerHTML = `
-        <div class="result">
-            <h2>📚 Test non superato</h2>
-            <br><p>Hai risposto correttamente a <b>${score}</b> domande su <b>${questions.length}</b>.</p>
-            <br><p>Devi ottenere almeno <b>6 risposte corrette su ${questions.length}</b>.</p>
-            <br><button id="retryButton">🔄 Ritenta il test</button>
-        </div>`;
-
-        document.getElementById("retryButton").onclick = () => {
-
-            document.body.className = "home";
-            changeBackground("home");
-
-            i = 0;
-            ans = new Array(questions.length).fill(null);
-            startScreen();
-        };
-
-    }
-}
-
-async function generateCertificate() {
-
-    try {
-
-        const input = document.getElementById("certificateName");
-
-        let name = input.value.trim();
-
-        name = name.replace(/[^\p{L}\p{M}' -]/gu, "");
-        name = name.replace(/\s+/g, " ");
-
-        name = name
-            .split(" ")
-            .map(word =>
-                word.charAt(0).toLocaleUpperCase() +
-                word.slice(1).toLocaleLowerCase()
-            )
-            .join(" ");
-
-        input.value = name;
-
-        if (!name) {
-            alert("Inserisci il tuo nome.");
-            return;
-        }
-
-        if (name.split(" ").length < 2) {
-            alert("Inserisci nome e cognome.");
-            return;
-        }
-
-        document
-            .getElementById("downloadMessage")
-            .classList.add("show");
-
-        const canvas = document.getElementById("certificateCanvas");
-        const ctx = canvas.getContext("2d");
-
-        // Carica il font (se disponibile)
-        try {
-
-            const font = new FontFace(
-                "Elven",
-                "url(fonts/elvencommonspeak.ttf)"
-            );
-
-            await font.load();
-            document.fonts.add(font);
-
-        } catch (e) {
-
-            console.warn("Impossibile caricare il font personalizzato.", e);
-
-        }
-
-        // Carica l'immagine del certificato
-        const image = await new Promise((resolve, reject) => {
-
-            const img = new Image();
-
-            img.onload = () => resolve(img);
-            img.onerror = reject;
-
-            img.src = "download/certificato.png";
-
-        });
-
-        canvas.width = image.width;
-        canvas.height = image.height;
-
-        ctx.drawImage(image, 0, 0);
-
-        let size = 500;
-        ctx.font = `${size}px Elven`;
-
-        while (
-            ctx.measureText(name).width > 900 &&
-            size > 40
-        ) {
-            size--;
-            ctx.font = `${size}px Elven`;
-        }
-
-        ctx.fillStyle = "#3a2b22";
-        ctx.textAlign = "center";
-        ctx.textBaseline = "middle";
-
-        ctx.fillText(
-            name,
-            canvas.width / 2,
-            560
-        );
-
-        // Genera il PDF
-        const { jsPDF } = window.jspdf;
-
-        const pdf = new jsPDF({
-            orientation: "landscape",
-            unit: "px",
-            format: [canvas.width, canvas.height]
-        });
-
-        pdf.addImage(
-            canvas.toDataURL("image/png"),
-            "PNG",
-            0,
-            0,
-            canvas.width,
-            canvas.height
-        );
-
-        pdf.save(`Certificato - ${name}.pdf`);
-
-    } catch (err) {
-
-        console.error(err);
-        alert("Errore durante la generazione del certificato.");
-
-    }
 
 }
 
@@ -381,6 +127,16 @@ app.style.transition = "opacity .25s ease, transform .25s ease";
 document.body.className = "home";
 changeBackground("home");
 
-startScreen();
+const params = new URLSearchParams(location.search);
+
+if (params.has("lessons")) {
+
+    showLessons();
+
+} else {
+
+    startScreen();
+
+}
 
 
