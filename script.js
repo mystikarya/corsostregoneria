@@ -144,7 +144,7 @@ function showLessons() {
 </button>
 
 <button class="lesson-button"
-        onclick="window.open('https://youtube.com/shorts/DoouZcHPny4', '_blank')">
+        onclick="window.open('https://youtu.be/Dm8eclBxYkYkY', '_blank')">
     9. Sigilli: cosa sono e come si creano
 </button>
 
