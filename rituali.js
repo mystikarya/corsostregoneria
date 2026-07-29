@@ -1,6 +1,6 @@
 const TOTAL_PAGES = 7;
 
-const grimorio = document.getElementById("grimorio");
+const rituali = document.getElementById("rituali");
 
 
 /* ===========================
@@ -16,7 +16,7 @@ for(let i = 1; i <= TOTAL_PAGES; i++){
     const img = document.createElement("img");
 
     img.src =
-        `assets/grimorio/${String(i).padStart(3,"0")}.jpg`;
+        `assets/rituali/${String(i).padStart(3,"0")}.jpg`;
 
     img.alt = `Pagina ${i}`;
 
@@ -35,7 +35,7 @@ for(let i = 1; i <= TOTAL_PAGES; i++){
 
 });
 
-    grimorio.appendChild(page);
+    rituali.appendChild(page);
 
 }
 

@@ -16,6 +16,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 Lezioni
             </a>
 
+            <a href="rituali.html">
+                Rituali
+            </a>
+
             <a href="grimorio.html">Grimorio</a>
 
 

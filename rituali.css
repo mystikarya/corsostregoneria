@@ -32,7 +32,7 @@ body{
    CONTENITORE
 =========================== */
 
-#grimorio{
+#rituali{
 
     width:100%;
 
@@ -167,7 +167,7 @@ body{
 
 @media (min-width:769px){
 
-    #grimorio{
+    #rituali{
 
             gap:0;padding:0;
 
@@ -206,7 +206,7 @@ body{
 @media (max-width:768px){
 
     
-    #grimorio{
+    #rituali{
 
         gap:0;
 

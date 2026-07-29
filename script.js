@@ -66,6 +66,10 @@ function startScreen() {
                 LEZIONI
             </button>
 
+            <button id="ritualsButton" onclick="location.href='rituali.html'">
+                RITUALI
+            </button>
+
             <button id="grimorioButton" onclick="location.href='grimorio.html'">
             GRIMORIO</button>
 
@@ -140,8 +144,13 @@ function showLessons() {
 </button>
 
 <button class="lesson-button"
+        onclick="window.open('https://youtube.com/shorts/DoouZcHPny4', '_blank')">
+    9. Sigilli: cosa sono e come si creano
+</button>
+
+<button class="lesson-button"
         onclick="window.open('LINK', '_blank')">
-    9. Laboratorio pratico: il tuo Rituale
+    10. Laboratorio pratico: il tuo Rituale
 </button>
             <button onclick="startScreen()">
                 ❮ Torna al menu

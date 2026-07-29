@@ -211,16 +211,16 @@ h1 {
 }
 
 
-#startButton,#testButton, #lessonsButton, #grimorioButton {
+#startButton,#testButton, #lessonsButton, #grimorioButton, #ritualsButton {
 
     min-width: 280px;
-    width: 280px;
-    height: 72px;
+    width: 260px;
+    height: 64px;
 
-    margin-top: 30px;
+    margin-top: 16px;
 
     font-family: "Nymeria";
-    font-size: 20px;
+    font-size: 18px;
     letter-spacing: 8px;
 
     animation: pulse 3s infinite;
@@ -572,7 +572,7 @@ a button {
     }
 
     .result {
-        margin-top:60px;
+        margin-top:70px;
         padding: 10px;
     }
 
@@ -606,7 +606,7 @@ a button {
         font-size: 19px
     }
 
-   #testButton, #lessonsButton, #grimorioButton {
+   #testButton, #lessonsButton, #grimorioButton, #ritualsButton {
     min-width: 200px;
     width: 200px;
     height: 64px;
