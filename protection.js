@@ -65,12 +65,6 @@ document.addEventListener("touchstart",()=>{},{
     passive:true
 });
 
-document.addEventListener("gesturestart",(e)=>{
-
-    e.preventDefault();
-
-});
-
 
 /* ===========================
    BLOCCA COPIA
