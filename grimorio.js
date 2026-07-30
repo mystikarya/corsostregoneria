@@ -1,4 +1,4 @@
-const TOTAL_PAGES = 7;
+const TOTAL_PAGES = 12;
 
 const grimorio = document.getElementById("grimorio");
 
