@@ -1,0 +1,242 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    background:
+        radial-gradient(circle at top,
+        #3b3326,
+        #1b1815 45%,
+        #090909);
+
+    font-family: Arial, sans-serif;
+
+    color:#fff;
+
+    overflow-y:auto;
+    overflow-x:hidden;
+
+}
+
+
+/* ===========================
+   CONTENITORE
+=========================== */
+
+#sigilli{
+
+    width:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:2px;
+
+    padding:0;
+
+}
+
+
+/* ===========================
+   PAGINA
+=========================== */
+
+.page{
+
+    width:100vw;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    opacity:.65;
+
+    transform:scale(.97);
+    filter: blur(.2px) brightness(.98);filter: blur(.2px) brightness(.98);
+    transition:
+
+        transform .35s ease,
+
+        opacity .35s ease,
+
+        filter .35s ease;
+
+}
+
+
+/* ===========================
+   PAGINA ATTIVA
+=========================== */
+
+.page.active{
+
+    opacity:1;
+
+    transform:scale(1);
+
+    filter:none;
+
+}
+
+
+/* ===========================
+   IMMAGINI
+=========================== */
+
+.page img{
+
+    width:100vw;
+
+    height:auto;
+
+    display:block;
+
+    user-select:none;
+
+    -webkit-user-drag:none;
+
+    pointer-events:none;
+
+}
+
+
+/* ===========================
+   SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#111;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#555;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#777;
+
+}
+
+
+/* ===========================
+   FOOTER
+=========================== */
+
+.site-footer{
+
+    text-align:center;
+
+    padding:20px;
+
+    color:#aaa;
+
+    font-size:.9rem;
+
+}
+
+/* ===========================
+   DESKTOP READER
+=========================== */
+
+@media (min-width:769px){
+
+    #sigilli{
+
+            gap:0;padding:0;
+
+
+    }
+
+    .page{
+
+        width:100%;
+
+    }
+
+    .page img{
+
+        width:100%;
+
+        max-width:400px;   /* Modifica questo valore a piacere */
+        height:auto;
+
+        display:block;
+
+        margin:auto;
+
+        border-radius:0px;
+
+        box-shadow:0 15px 40px rgba(0,0,0,.45);
+
+    }
+
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width:768px){
+
+    
+    #sigilli{
+
+        gap:0;
+
+        padding:0;
+
+    }
+
+    .page{
+
+        width:100vw;
+
+        margin:0;
+
+        transform:scale(.98);
+
+        opacity:.75;
+
+        filter:blur(.3px) brightness(.96);
+
+    }
+
+    .page img{
+
+        display:block;
+
+        width:100vw;
+
+        margin:0;
+
+    }
+
+
+}

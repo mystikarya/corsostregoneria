@@ -16,8 +16,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 Lezioni
             </a>
 
-            <a href="rituali.html">
+            <a href="index.html?rituals">
                 Rituali
+            </a>
+
+             <a href="sigilli.html">
+                Sigilli
             </a>
 
             <a href="grimorio.html">Grimorio</a>

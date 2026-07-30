@@ -211,7 +211,7 @@ h1 {
 }
 
 
-#startButton,#testButton, #lessonsButton, #grimorioButton, #ritualsButton {
+#startButton,#testButton, #lessonsButton, #grimorioButton, #ritualsButton, #sigilsButton {
 
     min-width: 280px;
     width: 260px;
@@ -606,7 +606,7 @@ a button {
         font-size: 19px
     }
 
-   #testButton, #lessonsButton, #grimorioButton, #ritualsButton {
+   #testButton, #lessonsButton, #grimorioButton, #ritualsButton, #ritualsButton {
     min-width: 200px;
     width: 200px;
     height: 64px;

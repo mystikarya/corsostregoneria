@@ -66,8 +66,12 @@ function startScreen() {
                 LEZIONI
             </button>
 
-            <button id="ritualsButton" onclick="location.href='rituali.html'">
+            <button id="ritualsButton">
                 RITUALI
+            </button>
+
+            <button id="sigilsButton" onclick="location.href='sigilli.html'">
+                SIGILLI
             </button>
 
             <button id="grimorioButton" onclick="location.href='grimorio.html'">
@@ -83,6 +87,11 @@ function startScreen() {
 
         showLessons();
 
+    };
+
+    document.getElementById("ritualsButton").onclick = () => {
+
+    showRituals();
     };
 
     document.getElementById("testButton").onclick = () => {
@@ -101,7 +110,7 @@ function showLessons() {
     app.innerHTML = `
         <div class="page-container">
 
-            <h1>Lezioni</h1>
+            <h1>LEZIONI</h1>
 
 <button class="lesson-button"
         onclick="window.open('https://youtu.be/KF_WKo94QVY', '_blank')">
@@ -152,6 +161,62 @@ function showLessons() {
         onclick="window.open('LINK', '_blank')">
     10. Laboratorio pratico: il tuo Rituale
 </button>
+
+<button class="lesson-button"
+        onclick="location.href='testfinale.html'">
+    Test finale
+</button>
+
+            <button onclick="startScreen()">
+                ❮ Torna al menu
+            </button>
+
+        </div>
+    `;
+
+}
+
+function showRituals() {
+
+    document.body.className = "home";
+    changeBackground("lessons");
+
+    app.innerHTML = `
+        <div class="page-container">
+
+            <h1>RITUALI</h1>
+
+            <button class="lesson-button"
+                    onclick="window.open('https://youtu.be/_hbF3AJRdNE', '_blank')">
+                Protezione & Purificazione
+            </button>
+
+            <button class="lesson-button"
+                    onclick="window.open('LINK2', '_blank')">
+                Amore
+            </button>
+
+            <button class="lesson-button"
+                    onclick="window.open('https://youtu.be/7xJBILu6-A8', '_blank')">
+                Ossessione
+            </button>
+
+            <button class="lesson-button"
+                    onclick="window.open('https://youtu.be/518lBjjvELk', '_blank')">
+                Separazione
+            </button>
+
+            <button class="lesson-button"
+                    onclick="window.open('https://youtube.com/shorts/Nx6zQOUPwMw', '_blank')">
+                Soldi & Fortuna
+            </button>
+
+            <button class="lesson-button"
+                    onclick="window.open('https://www.youtube.com/playlist?list=PL8jyzCiNou5b49wqHlLIlZXRCHJ2bD8-z', '_blank')">
+                Approfondimenti:
+                <br>apertura e chiusura dei rituali
+            </button>
+
             <button onclick="startScreen()">
                 ❮ Torna al menu
             </button>
@@ -171,6 +236,10 @@ const params = new URLSearchParams(location.search);
 if (params.has("lessons")) {
 
     showLessons();
+
+} else if (params.has("rituals")) {
+
+    showRituals();
 
 } else {
 
