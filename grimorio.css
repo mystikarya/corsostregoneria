@@ -66,7 +66,7 @@ body{
     opacity:.65;
 
     transform:scale(.97);
-    filter: blur(.2px) brightness(.98);filter: blur(.2px) brightness(.98);
+    filter: brightness(.98);
     transition:
 
         transform .35s ease,
@@ -224,7 +224,7 @@ body{
 
         opacity:.75;
 
-        filter:blur(.3px) brightness(.96);
+        filter: brightness(.96);
 
     }
 

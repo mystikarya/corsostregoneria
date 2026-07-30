@@ -91,7 +91,7 @@ function startScreen() {
 
     document.getElementById("ritualsButton").onclick = () => {
 
-    showRituals();
+        showRituals();
     };
 
     document.getElementById("testButton").onclick = () => {
@@ -171,8 +171,7 @@ function showLessons() {
                 ❮ Torna al menu
             </button>
 
-        </div>
-    `;
+        </div>`;
 
 }
 

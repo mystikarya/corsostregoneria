@@ -89,8 +89,6 @@ window.addEventListener("scroll",()=>{
 
         const opacity = 1 - (factor * 0.45);
 
-        const blur = factor * 2;
-
         page.style.transform =
             `scale(${scale})`;
 
@@ -98,7 +96,7 @@ window.addEventListener("scroll",()=>{
             opacity;
 
         page.style.filter =
-            `blur(${blur}px) brightness(${1-factor*0.25})`;
+        `brightness(${1-factor*0.25})`;
 
     });
 
