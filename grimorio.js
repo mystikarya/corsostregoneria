@@ -89,13 +89,13 @@ window.addEventListener("scroll",()=>{
 
         const opacity = 1 - (factor * 0.45);
 
-        page.style.transform =
-            `scale(${scale})`;
+        page.style.transform = "scale(1)"; // Nessuno zoom
+
 
         page.style.opacity =
             opacity;
 
-        ppage.style.filter =
+        page.style.filter =
         `brightness(${1-factor*0.25})`;
 
     });
