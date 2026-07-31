@@ -8,7 +8,8 @@ const backgrounds = {
     home: "assets/bg1.png",
     quiz: "assets/bg2.png",
     lessons: "assets/bg4.png",
-    result: "assets/bg3.png"
+    result: "assets/bg3.png",
+    rituals: "assets/bg5.png"
 };
 
 
@@ -179,7 +180,7 @@ function showLessons() {
 function showRituals() {
 
     document.body.className = "home";
-    changeBackground("lessons");
+    changeBackground("rituals");
 
     app.innerHTML = `
         <div class="page-container">
