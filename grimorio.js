@@ -2,114 +2,136 @@ const TOTAL_PAGES = 12;
 
 const grimorio = document.getElementById("grimorio");
 
+let loadedImages = 0;
+const pages = [];
 
 /* ===========================
    CREA LE PAGINE
 =========================== */
 
-for(let i = 1; i <= TOTAL_PAGES; i++){
+for (let i = 1; i <= TOTAL_PAGES; i++) {
 
     const page = document.createElement("div");
-
     page.className = "page";
 
     const img = document.createElement("img");
 
-    img.src =
-        `assets/grimorio/${String(i).padStart(3,"0")}.jpg`;
-
+    img.src = `assets/grimorio/${String(i).padStart(3, "0")}.jpg`;
     img.alt = `Pagina ${i}`;
 
-    img.loading = "lazy";
+    img.loading = "eager";
+    img.decoding = "async";
 
-    page.appendChild(img);
-    page.addEventListener("click",()=>{
+    img.onload = () => {
 
-    page.scrollIntoView({
+        loadedImages++;
 
-        behavior:"smooth",
+        if (loadedImages === TOTAL_PAGES) {
 
-        block:"center"
-
-    });
-
-});
-
-    grimorio.appendChild(page);
-
-}
-
-
-/* ===========================
-   ANIMAZIONE SCROLL
-=========================== */
-
-const pages = document.querySelectorAll(".page");
-
-const observer = new IntersectionObserver((entries)=>{
-
-    entries.forEach(entry=>{
-
-        if(entry.isIntersecting){
-
-            entry.target.classList.add("active");
-
-        }else{
-
-            entry.target.classList.remove("active");
+            startReader();
 
         }
 
-    });
+    };
 
-},{
-    threshold:0.65
-});
+    img.onerror = () => {
 
-pages.forEach(page=>observer.observe(page));
+        loadedImages++;
 
+        if (loadedImages === TOTAL_PAGES) {
 
-/* ===========================
-   PARALLASSE LEGGERA
-=========================== */
+            startReader();
 
-window.addEventListener("scroll",()=>{
+        }
 
-    const center = window.innerHeight / 2;
+    };
 
-    pages.forEach(page=>{
+    page.appendChild(img);
 
-        const rect = page.getBoundingClientRect();
+    page.addEventListener("click", () => {
 
-        const distance = Math.abs(center - (rect.top + rect.height/2));
+        page.scrollIntoView({
 
-        const factor = Math.min(distance / center,1);
+            behavior: "smooth",
+            block: "center"
 
-        const scale = 1 - (factor * 0.10);
-
-        const opacity = 1 - (factor * 0.45);
-
-        page.style.transform = "scale(1)"; // Nessuno zoom
-
-
-        page.style.opacity =
-            opacity;
-
-        page.style.filter =
-        `brightness(${1-factor*0.25})`;
+        });
 
     });
 
-},{passive:true});
+    grimorio.appendChild(page);
+    pages.push(page);
 
+}
 
 /* ===========================
    AVVIO
 =========================== */
 
-window.dispatchEvent(new Event("scroll"));
-// Prima pagina già attiva all'avvio
-pages[0].classList.add("active");
-pages[0].style.transform = "scale(1)";
-pages[0].style.opacity = "1";
-pages[0].style.filter = "none";
+function startReader() {
+
+    const observer = new IntersectionObserver((entries) => {
+
+        entries.forEach(entry => {
+
+            entry.target.classList.toggle(
+                "active",
+                entry.isIntersecting
+            );
+
+        });
+
+    }, {
+        threshold: 0.65
+    });
+
+    pages.forEach(page => observer.observe(page));
+
+    window.addEventListener("scroll", updatePages, {
+        passive: true
+    });
+
+    updatePages();
+
+    if (pages.length) {
+
+        pages[0].classList.add("active");
+        pages[0].style.opacity = "1";
+        pages[0].style.filter = "none";
+        pages[0].style.transform = "scale(1)";
+
+    }
+
+    requestAnimationFrame(() => {
+
+        document.body.classList.add("loaded");
+
+    });
+
+}
+
+/* ===========================
+   EFFETTO SCROLL
+=========================== */
+
+function updatePages() {
+
+    const center = window.innerHeight / 2;
+
+    pages.forEach(page => {
+
+        const rect = page.getBoundingClientRect();
+
+        const distance = Math.abs(
+            center - (rect.top + rect.height / 2)
+        );
+
+        const factor = Math.min(distance / center, 1);
+
+        page.style.transform = "scale(1)";
+        page.style.opacity = 1 - factor * 0.45;
+        page.style.filter = `brightness(${1 - factor * 0.25})`;
+
+    });
+
+}

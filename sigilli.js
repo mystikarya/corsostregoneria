@@ -3,6 +3,12 @@ const TOTAL_PAGES = 5;
 const sigilli = document.getElementById("sigilli");
 
 
+window.addEventListener("load", () => {
+
+    document.body.classList.add("loaded");
+
+});
+
 /* ===========================
    CREA LE PAGINE
 =========================== */
@@ -20,8 +26,8 @@ for(let i = 1; i <= TOTAL_PAGES; i++){
 
     img.alt = `Pagina ${i}`;
 
-    img.loading = "lazy";
-
+img.loading = "eager";
+img.decoding = "async";
     page.appendChild(img);
     page.addEventListener("click",()=>{
 

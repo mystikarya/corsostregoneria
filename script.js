@@ -12,6 +12,7 @@ const backgrounds = {
 };
 
 
+
 function changeBackground(scene) {
 
     const fade = document.getElementById("bgFade");

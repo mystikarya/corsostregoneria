@@ -1,0 +1,158 @@
+@import url("style.css");
+
+/* ===========================
+   LOGIN
+=========================== */
+
+.login-box{
+
+    width:100%;
+    max-width:460px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    padding:40px 30px;
+
+    background:rgba(255,255,255,.05);
+    backdrop-filter:blur(12px);
+
+    border-radius:30px;
+
+    box-shadow:0 15px 45px rgba(0,0,0,.45);
+
+    animation:fadeUp .8s ease;
+
+}
+
+.logo{
+
+    width:120px;
+    margin-bottom:20px;
+
+}
+
+.login-box h1{
+
+    font-family:"Nymeria";
+    font-size:58px;
+    font-weight:400;
+
+    margin-bottom:35px;
+
+    text-align:center;
+
+}
+
+.login-box input{
+
+    width:100%;
+    height:58px;
+
+    margin-bottom:18px;
+
+    padding:0 22px;
+
+    border:none;
+    border-radius:999px;
+
+    background:rgba(255,255,255,.08);
+
+    color:#fff;
+    font-size:16px;
+
+    outline:none;
+
+    transition:.3s;
+
+}
+
+.login-box input:focus{
+
+    background:rgba(255,255,255,.12);
+    box-shadow:0 0 20px rgba(223,195,106,.25);
+
+}
+
+.login-box input::placeholder{
+
+    color:rgba(255,255,255,.45);
+
+}
+
+/* ===========================
+   LOGIN BUTTON
+=========================== */
+
+#loginButton{
+
+    transition:
+        opacity .35s ease,
+        transform .35s ease;
+
+}
+
+#loginButton.hide{
+
+    opacity:0;
+
+    transform:translateY(-8px);
+
+    pointer-events:none;
+
+}
+
+/* ===========================
+   ERROR
+=========================== */
+
+#error{
+
+    margin-top:18px;
+
+    min-height:20px;
+
+    color:#ff8b8b;
+
+    font-family:"Maginia";
+
+    letter-spacing:1px;
+
+    text-align:center;
+
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width:768px){
+
+    body{
+
+        min-height:100dvh;
+
+        padding:4%;
+
+        align-items:flex-start;
+
+    }
+
+    .login-box{
+
+        width:100%;
+
+        padding:35px 20px!important;
+
+        margin-top:80px!important;
+
+    }
+
+    .login-box h1{
+
+        font-size:38px;
+
+    }
+
+}

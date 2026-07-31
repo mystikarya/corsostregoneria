@@ -12,11 +12,10 @@ html{
 
 body{
 
-    background:
-        radial-gradient(circle at top,
-        #3b3326,
-        #1b1815 45%,
-        #090909);
+    opacity:0;
+    background:#090909;
+
+    transition:opacity .5s ease;
 
     font-family: Arial, sans-serif;
 
@@ -24,6 +23,12 @@ body{
 
     overflow-y:auto;
     overflow-x:hidden;
+
+}
+
+body.loaded{
+
+    opacity:1;
 
 }
 
