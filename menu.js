@@ -25,8 +25,8 @@ document.addEventListener("DOMContentLoaded", () => {
             </a>
 
             <a href="grimorio.html">Grimorio</a>
-
-
+            <a href="https://drive.google.com/drive/folders/1UCIovmoxB9E8OBDpnUDIzTvk_1yHTRtg?usp=drive_link" target="_blank" rel="noopener noreferrer">Tutto il materiale + approfondimenti</a>
+            
             <a href="testfinale.html">
                 Test Finale
             </a>

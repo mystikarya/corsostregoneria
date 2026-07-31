@@ -185,40 +185,49 @@ function showRituals() {
 
             <h1>RITUALI</h1>
 
-            <button class="lesson-button"
-                    onclick="window.open('https://youtu.be/_hbF3AJRdNE', '_blank')">
-                Protezione & Purificazione
-            </button>
+<button class="lesson-button"
+        onclick="window.location.href='https://youtu.be/_hbF3AJRdNE'">
+    Protezione & Purificazione
+</button>
 
-            <button class="lesson-button"
-                    onclick="window.open('LINK2', '_blank')">
-                Amore
-            </button>
+<button class="lesson-button"
+        onclick="window.location.href='LINK2'">
+    Amore
+</button>
 
-            <button class="lesson-button"
-                    onclick="window.open('https://youtu.be/7xJBILu6-A8', '_blank')">
-                Ossessione
-            </button>
+<button class="lesson-button"
+        onclick="window.location.href='https://youtu.be/7xJBILu6-A8'">
+    Ossessione
+</button>
 
-            <button class="lesson-button"
-                    onclick="window.open('https://youtu.be/518lBjjvELk', '_blank')">
-                Separazione
-            </button>
+<button class="lesson-button"
+        onclick="window.location.href='https://youtu.be/518lBjjvELk'">
+    Separazione
+</button>
 
-            <button class="lesson-button"
-                    onclick="window.open('https://youtube.com/shorts/Nx6zQOUPwMw', '_blank')">
-                Soldi & Fortuna
-            </button>
+<button class="lesson-button"
+        onclick="window.location.href='https://youtube.com/shorts/Nx6zQOUPwMw'">
+    Soldi & Fortuna
+</button>
 
-            <button class="lesson-button"
-                    onclick="window.open('https://www.youtube.com/playlist?list=PL8jyzCiNou5b49wqHlLIlZXRCHJ2bD8-z', '_blank')">
-                Approfondimenti:
-                <br>apertura e chiusura dei rituali
-            </button>
+<button class="lesson-button"
+        onclick="window.location.href='https://'">
+    Come ritualizzare le candele
+</button>
 
-            <button onclick="startScreen()">
-                ❮ Torna al menu
-            </button>
+<button class="lesson-button"
+        onclick="window.location.href='https://youtube.com/playlist?list=PL8jyzCiNou5a4oE9P92JQoI8S35CtpOIB&si=iBvtNd-l5LFtrPF4'">
+    Subliminali di potenziamento energetico
+</button>
+
+<button class="lesson-button"
+        onclick="window.location.href='https://www.youtube.com/playlist?list=PL8jyzCiNou5b49wqHlLIlZXRCHJ2bD8-z'">
+    Approfondimenti
+</button>
+
+<button onclick="startScreen()">
+    ❮ Torna al menu
+</button>
 
         </div>
     `;
