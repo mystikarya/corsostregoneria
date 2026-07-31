@@ -328,7 +328,7 @@ async function generateCertificate() {
 
         ctx.drawImage(image, 0, 0);
 
-        let size = 580;
+        let size = 600;
         ctx.font = `${size}px Elven`;
 
         while (
@@ -346,7 +346,7 @@ async function generateCertificate() {
         ctx.fillText(
             name,
             canvas.width / 2,
-            570
+            580
         );
 
         // Genera il PDF
