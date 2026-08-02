@@ -347,7 +347,7 @@ async function generateCertificate() {
         ctx.fillText(
             name,
             canvas.width / 2,
-            570
+            562
         );
 
         // Genera il PDF
