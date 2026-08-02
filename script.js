@@ -115,57 +115,57 @@ function showLessons() {
             <h1>LEZIONI</h1>
 
 <button class="lesson-button"
-        onclick="window.open('https://youtu.be/KF_WKo94QVY', '_blank')">
+        onclick="window.location.href='https://youtu.be/KF_WKo94QVY'">
     1. Introduzione alla Ritualistica
 </button>
 
 <button class="lesson-button"
-        onclick="window.open('https://youtu.be/ghTIrXwCwwg', '_blank')">
+        onclick="window.location.href='https://youtu.be/ghTIrXwCwwg'">
     2. Le principali tradizioni
 </button>
 
 <button class="lesson-button"
-        onclick="window.open('https://youtu.be/-rYgPhRFruI', '_blank')">
+        onclick="window.location.href='https://youtu.be/-rYgPhRFruI'">
     3. Stregoneria evocativa e non evocativa
 </button>
 
 <button class="lesson-button"
-        onclick="window.open('https://youtu.be/qSgCu4ton_I', '_blank')">
+        onclick="window.location.href='https://youtu.be/qSgCu4ton_I'">
     4. I falsi miti sulla Stregoneria
 </button>
 
 <button class="lesson-button"
-        onclick="window.open('https://youtu.be/eFCt_T1A4E4', '_blank')">
+        onclick="window.location.href='https://youtu.be/eFCt_T1A4E4'">
     5. Il libero arbitrio
 </button>
 
 <button class="lesson-button"
-        onclick="window.open('https://youtu.be/VYrjQKvYm-g', '_blank')">
+        onclick="window.location.href='https://youtu.be/VYrjQKvYm-g'">
     6. Le fasi di un rituale
 </button>
 
 <button class="lesson-button"
-        onclick="window.open('https://youtu.be/Im0ipO4QCow', '_blank')">
+        onclick="window.location.href='https://youtu.be/Im0ipO4QCow'">
     7. Quando praticare
 </button>
 
 <button class="lesson-button"
-        onclick="window.open('https://youtu.be/Z_QFPJAMSug', '_blank')">
+        onclick="window.location.href='https://youtu.be/Z_QFPJAMSug'">
     8. Introduzione alla Divinazione
 </button>
 
 <button class="lesson-button"
-        onclick="window.open('https://youtu.be/Dm8eclBxYkYkY', '_blank')">
+        onclick="window.location.href='https://youtu.be/Dm8eclBxYkYkY'">
     9. Sigilli: cosa sono e come si creano
 </button>
 
 <button class="lesson-button"
-        onclick="window.open('LINK', '_blank')">
+        onclick="window.location.href='https://youtu.be/t6TU4vT6spE'">
     10. Laboratorio pratico: il tuo Rituale
 </button>
 
 <button class="lesson-button"
-        onclick="location.href='testfinale.html'">
+        onclick="window.location.href='testfinale.html'">
     Test finale
 </button>
 
@@ -193,7 +193,7 @@ function showRituals() {
 </button>
 
 <button class="lesson-button"
-        onclick="window.location.href='LINK2'">
+        onclick="window.location.href='https://youtu.be/t6TU4vT6spE'">
     Amore
 </button>
 
@@ -213,7 +213,7 @@ function showRituals() {
 </button>
 
 <button class="lesson-button"
-        onclick="window.location.href='https://'">
+        onclick="window.location.href='https://youtube.com/shorts/0jOf3j0wGNg'">
     Come ritualizzare le candele
 </button>
 
