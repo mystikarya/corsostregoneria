@@ -203,7 +203,7 @@ function showRituals() {
 </button>
 
 <button class="lesson-button"
-        onclick="window.location.href='https://youtu.be/518lBjjvELk'">
+        onclick="window.location.href='https://youtube.com/shorts/jUV--b6haDk'">
     Separazione
 </button>
 
