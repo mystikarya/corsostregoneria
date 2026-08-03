@@ -198,7 +198,7 @@ function showRituals() {
 </button>
 
 <button class="lesson-button"
-        onclick="window.location.href='https://youtu.be/7xJBILu6-A8'">
+        onclick="window.location.href='https://youtu.be/jqm9aC9I7h0'">
     Ossessione
 </button>
 
