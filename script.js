@@ -109,72 +109,46 @@ function showLessons() {
     document.body.className = "home";
     changeBackground("lessons");
 
+    const lessons = [
+        { title: "1. Introduzione alla Ritualistica",        url: "https://youtu.be/KF_WKo94QVY" },
+        { title: "2. Le principali tradizioni",              url: "https://youtu.be/ghTIrXwCwwg" },
+        { title: "3. Stregoneria evocativa e non evocativa", url: "https://youtu.be/-rYgPhRFruI" },
+        { title: "4. I falsi miti sulla Stregoneria",        url: "https://youtu.be/qSgCu4ton_I" },
+        { title: "5. Il libero arbitrio",                    url: "https://youtu.be/eFCt_T1A4E4" },
+        { title: "6. Le fasi di un rituale",                 url: "https://youtu.be/VYrjQKvYm-g" },
+        { title: "7. Quando praticare",                      url: "https://youtu.be/Im0ipO4QCow" },
+        { title: "8. Introduzione alla Divinazione",         url: "https://youtu.be/Z_QFPJAMSug" },
+        { title: "9. Sigilli: cosa sono e come si creano",   url: "https://youtu.be/Dm8eclBxYkYkY" },
+        { title: "10. Laboratorio pratico: il tuo Rituale",  url: "https://youtu.be/t6TU4vT6spE" }
+    ];
+
+    const cards = lessons.map((lesson, i) => `
+        <a class="lesson-card" href="${lesson.url}" style="animation-delay:${i * 0.06}s">
+            <img src="assets/lezione${i + 1}.webp" alt="Lezione ${i + 1}" loading="lazy">
+            <span class="lesson-card-title">${lesson.title}</span>
+        </a>
+    `).join("");
+
     app.innerHTML = `
         <div class="page-container">
 
             <h1>LEZIONI</h1>
 
-<button class="lesson-button"
-        onclick="window.location.href='https://youtu.be/KF_WKo94QVY'">
-    1. Introduzione alla Ritualistica
-</button>
+            <div class="lessons-list">
+                ${cards}
 
-<button class="lesson-button"
-        onclick="window.location.href='https://youtu.be/ghTIrXwCwwg'">
-    2. Le principali tradizioni
-</button>
-
-<button class="lesson-button"
-        onclick="window.location.href='https://youtu.be/-rYgPhRFruI'">
-    3. Stregoneria evocativa e non evocativa
-</button>
-
-<button class="lesson-button"
-        onclick="window.location.href='https://youtu.be/qSgCu4ton_I'">
-    4. I falsi miti sulla Stregoneria
-</button>
-
-<button class="lesson-button"
-        onclick="window.location.href='https://youtu.be/eFCt_T1A4E4'">
-    5. Il libero arbitrio
-</button>
-
-<button class="lesson-button"
-        onclick="window.location.href='https://youtu.be/VYrjQKvYm-g'">
-    6. Le fasi di un rituale
-</button>
-
-<button class="lesson-button"
-        onclick="window.location.href='https://youtu.be/Im0ipO4QCow'">
-    7. Quando praticare
-</button>
-
-<button class="lesson-button"
-        onclick="window.location.href='https://youtu.be/Z_QFPJAMSug'">
-    8. Introduzione alla Divinazione
-</button>
-
-<button class="lesson-button"
-        onclick="window.location.href='https://youtu.be/Dm8eclBxYkYkY'">
-    9. Sigilli: cosa sono e come si creano
-</button>
-
-<button class="lesson-button"
-        onclick="window.location.href='https://youtu.be/t6TU4vT6spE'">
-    10. Laboratorio pratico: il tuo Rituale
-</button>
-
-<button class="lesson-button"
-        onclick="window.location.href='testfinale.html'">
-    Test finale
-</button>
+                <a class="lesson-card" href="testfinale.html"
+                   style="animation-delay:${lessons.length * 0.06}s">
+                    <img src="assets/testfinalelezione.png" alt="Test finale" loading="lazy">
+                    <span class="lesson-card-title">Test finale</span>
+                </a>
+            </div>
 
             <button onclick="startScreen()">
                 ❮ Torna al menu
             </button>
 
         </div>`;
-
 }
 
 function showRituals() {
@@ -182,58 +156,38 @@ function showRituals() {
     document.body.className = "home";
     changeBackground("rituals");
 
+    const rituals = [
+        { title: "Protezione & Purificazione",              url: "https://youtu.be/_hbF3AJRdNE" },
+        { title: "Amore",                                   url: "https://youtu.be/t6TU4vT6spE" },
+        { title: "Ossessione",                              url: "https://youtu.be/jqm9aC9I7h0" },
+        { title: "Separazione",                             url: "https://youtube.com/shorts/jUV--b6haDk" },
+        { title: "Soldi & Fortuna",                         url: "https://youtube.com/shorts/Nx6zQOUPwMw" },
+        { title: "Come ritualizzare le candele",            url: "https://youtube.com/shorts/0jOf3j0wGNg" },
+        { title: "Subliminali di potenziamento energetico", url: "https://youtube.com/playlist?list=PL8jyzCiNou5a4oE9P92JQoI8S35CtpOIB&si=iBvtNd-l5LFtrPF4" },
+        { title: "Approfondimenti",                         url: "https://www.youtube.com/playlist?list=PL8jyzCiNou5b49wqHlLIlZXRCHJ2bD8-z" }
+    ];
+
+    const cards = rituals.map((ritual, i) => `
+        <a class="lesson-card" href="${ritual.url}" style="animation-delay:${i * 0.06}s">
+            <img src="assets/ritual${i + 1}.webp" alt="${ritual.title}" loading="lazy">
+            <span class="lesson-card-title">${ritual.title}</span>
+        </a>
+    `).join("");
+
     app.innerHTML = `
         <div class="page-container">
 
             <h1>RITUALI</h1>
 
-<button class="lesson-button"
-        onclick="window.location.href='https://youtu.be/_hbF3AJRdNE'">
-    Protezione & Purificazione
-</button>
+           <div class="lessons-list rituals-list">
+    ${cards}
+</div>
 
-<button class="lesson-button"
-        onclick="window.location.href='https://youtu.be/t6TU4vT6spE'">
-    Amore
-</button>
+            <button onclick="startScreen()">
+                ❮ Torna al menu
+            </button>
 
-<button class="lesson-button"
-        onclick="window.location.href='https://youtu.be/jqm9aC9I7h0'">
-    Ossessione
-</button>
-
-<button class="lesson-button"
-        onclick="window.location.href='https://youtube.com/shorts/jUV--b6haDk'">
-    Separazione
-</button>
-
-<button class="lesson-button"
-        onclick="window.location.href='https://youtube.com/shorts/Nx6zQOUPwMw'">
-    Soldi & Fortuna
-</button>
-
-<button class="lesson-button"
-        onclick="window.location.href='https://youtube.com/shorts/0jOf3j0wGNg'">
-    Come ritualizzare le candele
-</button>
-
-<button class="lesson-button"
-        onclick="window.location.href='https://youtube.com/playlist?list=PL8jyzCiNou5a4oE9P92JQoI8S35CtpOIB&si=iBvtNd-l5LFtrPF4'">
-    Subliminali di potenziamento energetico
-</button>
-
-<button class="lesson-button"
-        onclick="window.location.href='https://www.youtube.com/playlist?list=PL8jyzCiNou5b49wqHlLIlZXRCHJ2bD8-z'">
-    Approfondimenti
-</button>
-
-<button onclick="startScreen()">
-    ❮ Torna al menu
-</button>
-
-        </div>
-    `;
-
+        </div>`;
 }
 
 app.style.transition = "opacity .25s ease, transform .25s ease";
