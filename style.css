@@ -132,7 +132,7 @@ body.result {
 
 }
 
-/* BOTTONI */
+/* BOTTONI (vecchio stile, utile se lo usi ancora altrove) */
 
 .page-container .lesson-button {
 
@@ -160,8 +160,6 @@ body.result {
 
 }
 
-/* HOVER */
-
 .page-container .lesson-button:hover {
 
     transform: translateY(-2px) scale(1.02);
@@ -176,6 +174,93 @@ body.result {
     max-width: 320px;
 
 }
+
+/* =========================== CARD LEZIONI =========================== */
+
+.lessons-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+    margin-top: 30px;
+}
+
+.lesson-card {
+    position: relative;
+    display: block;
+    width: 100%;
+    max-width: 430px;
+    border-radius: 24px;
+    overflow: hidden;
+    text-decoration: none;
+    color: #fff;
+    background: rgba(255, 255, 255, .06);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, .35);
+    cursor: pointer;
+    animation: fadeUp .6s both;
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        background .35s ease;
+}
+
+.lesson-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: center 30%;
+}
+
+/* pagina RITUALI: taglio spostato verso il basso */
+.rituals-list .lesson-card img {
+    object-position: center 62%;
+}
+
+/* gradient scuro sulla parte bassa dell'immagine, che sfuma nel titolo */
+.lesson-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0) 40%,
+            rgba(0, 0, 0, .9) 100%);
+}
+
+/* titolo sovrapposto in basso, sopra il gradient */
+.lesson-card-title {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    display: block;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, .7);
+    padding: 16px 18px 20px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 1.05rem;
+    letter-spacing: 1px;
+    line-height: 1.3;
+    text-align: center;
+}
+
+.lesson-card:hover {
+    transform: translateY(-4px) scale(1.02);
+    background: rgba(255, 255, 255, .1);
+    box-shadow:
+        0 0 24px rgba(223, 195, 106, .35),
+        0 20px 45px rgba(0, 0, 0, .45);
+}
+
+.lesson-card:active {
+    transform: translateY(-1px) scale(.98);
+}
+
+/* =========================== HOME / QUIZ =========================== */
 
 .start-screen {
     display: flex;
@@ -356,6 +441,8 @@ a button {
 
 }
 
+/* =========================== ANIMAZIONI =========================== */
+
 @keyframes fadeUp {
     from {
         opacity: 0;
@@ -471,6 +558,7 @@ a button {
     }
 }
 
+/* =========================== CERTIFICATO =========================== */
 
 #certificateName {
 
@@ -524,6 +612,8 @@ a button {
 
 }
 
+/* =========================== FOOTER =========================== */
+
 .site-footer {
     position: absolute;
     left: 50%;
@@ -537,9 +627,10 @@ a button {
     background: transparent;
     pointer-events: none;
     user-select: none;
-    bottom:0px;
+    bottom: 0px;
 }
 
+/* =========================== MOBILE =========================== */
 
 @media(max-width:768px) {
 
@@ -595,8 +686,6 @@ a button {
         max-width: 650px;
         margin: 18px auto;
         padding: 18px;
-
-
     }
 
     button {
@@ -610,7 +699,6 @@ a button {
     #lessonsButton,
     #grimorioButton,
     #sigilsButton,
-    #ritualsButton,
     #ritualsButton {
         min-width: 200px;
         width: 200px;
@@ -651,7 +739,18 @@ a button {
         font-size: 10px;
     }
 
+    /* card lezioni su mobile */
 
+    .page-container {
+        padding: 30px 18px 50px;
+    }
 
+    .lesson-card {
+        max-width: 100%;
+    }
+
+    .lesson-card-title {
+        font-size: 1rem;
+    }
 
 }
