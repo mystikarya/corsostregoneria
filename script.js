@@ -58,12 +58,7 @@ function startScreen() {
             <h1 class="corso" style="line-height:0.9!important;">Corso di
             <br>STREGONERIA</h1>
 
-            <br><p>
-                Benvenuta/o!
-                <br>Oggi inizia il tuo percorso magico.
-                <br>Segui le lezioni e affronta il test finale
-                <br>per ottenere il Certificato di Stregoneria!
-            </p>
+            <br>
             <button id="lessonsButton">
                 LEZIONI
             </button>
@@ -110,8 +105,8 @@ function showLessons() {
     changeBackground("lessons");
 
     const lessons = [
-        { title: "1. Introduzione alla Ritualistica",        url: "https://youtu.be/KF_WKo94QVY" },
-        { title: "2. Le principali tradizioni",              url: "https://youtu.be/ghTIrXwCwwg" },
+        { title: "1. Introduzione alla Ritualistica",        url: "https://youtu.be/BBVlB_I_s1g" },
+        { title: "2. Le principali tradizioni",              url: "https://youtu.be/97ym9PZi88Q" },
         { title: "3. Stregoneria evocativa e non evocativa", url: "https://youtu.be/-rYgPhRFruI" },
         { title: "4. I falsi miti sulla Stregoneria",        url: "https://youtu.be/qSgCu4ton_I" },
         { title: "5. Il libero arbitrio",                    url: "https://youtu.be/eFCt_T1A4E4" },
