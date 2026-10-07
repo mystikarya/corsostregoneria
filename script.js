@@ -111,7 +111,7 @@ function showLessons() {
         { title: "4. I falsi miti sulla Stregoneria",        url: "https://youtu.be/qSgCu4ton_I" },
         { title: "5. Il libero arbitrio",                    url: "https://youtu.be/eFCt_T1A4E4" },
         { title: "6. Le fasi di un rituale",                 url: "https://youtu.be/VYrjQKvYm-g" },
-        { title: "7. Quando praticare",                      url: "https://youtu.be/Im0ipO4QCow" },
+        { title: "7. Lunazione e giorni: quando praticare",  url: "https://youtu.be/D0hjAlMG7oQ" },
         { title: "8. Introduzione alla Divinazione",         url: "https://youtu.be/Z_QFPJAMSug" },
         { title: "9. Sigilli: cosa sono e come si creano",   url: "https://youtu.be/Dm8eclBxYkYkY" },
         { title: "10. Laboratorio pratico: il tuo Rituale",  url: "https://youtu.be/t6TU4vT6spE" }
