@@ -26,14 +26,14 @@ correct:0
 
 {
 question:"E' sempre giusto seguire le fasi lunari quando si effettua un rituale?",
-answers:["No, non è necessario seguire le fasi lunari","Sì, è sempre opportuno seguire le fasi lunari","E' consigliato seguire le fasi lunari quando si svolge un rituale di amore","Dipende da più fattori, come: esperienza della Strega, tipologia di Stregoneria, preferenza personale, culto"],
+answers:["No, non è necessario seguire le fasi lunari","Sì, è sempre opportuno seguire le fasi lunari","E' consigliato seguire le fasi lunari quando si svolge un rituale di amore","Dipende da più fattori, come: esperienza della Strega, preferenza personale, culto"],
 correct:3
 },
 
 {
-question:"Se voglio lanciare un Rituale di Vendetta, in quale giorno è consigliato svolgerlo?",
+question:"Se voglio lanciare un Rituale di Amore, in quale giorno è consigliato svolgerlo?",
 answers:["Lunedì","Martedì","Venerdì","Sabato"],
-correct:1
+correct:2
 },
 
 {
